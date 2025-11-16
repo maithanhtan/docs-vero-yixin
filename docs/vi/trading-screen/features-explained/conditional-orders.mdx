@@ -1,0 +1,38 @@
+---
+title: "Lệnh điều kiện"
+description: "Hướng dẫn về lệnh điều kiện trên nền tảng vero"
+---
+
+Từ ngày 16/07/2020, vero ra mắt tính năng đặt lệnh điều kiện hỗ trợ Nhà Đầu Tư trong quá trình giao dịch chứng khoán phái sinh qua nền tảng vero.
+
+## 1. Lệnh điều kiện
+
+**Lệnh điều kiện:** Là lệnh mua/bán hợp đồng tương lai nhưng kết hợp cài đặt thêm các điều kiện về thời gian, về giá, về quy luật phát sinh lệnh. Theo đó, hệ thống sẽ kiểm tra và xử lý lệnh theo các điều kiện đã được cài đặt.
+
+- **Giá đặt lệnh (Order Price):** là giá của lệnh được phát sinh vào sàn khi đã thỏa mãn các điều kiện. Giá được khách hàng thiết lập lúc đặt lệnh và có thể thay đổi theo những nguyên tắc do khách hàng cài đặt.
+- **Giá kích hoạt (Trigger Price):** là giá được sử dụng để so sánh với giá thị trường của HĐTL để xác định điều kiện về giá của lệnh điều kiện có thỏa mãn hay không. Giá kích hoạt là giá trong phiên liên tục.
+- **Ngày hết hạn (Expired Time):** là ngày và giờ hết hạn được NĐT chọn trong quá trình cài đặt điều kiện cho loại lệnh này. Tại nền tảng vero, ngày giờ hết hạn xa nhất có thể đặt cho 1 lệnh điều kiện là 30 ngày kể từ ngày đặt lệnh.
+
+*Khi các điều kiện về giá được thoả mãn, lệnh điều kiện sẽ được kích hoạt. Đồng thời, 1 lệnh LO tương ứng được sinh ra và hiển thị trong sổ lệnh thường.
+
+**Nguyên tắc hủy lệnh:** Lệnh điều kiện chỉ được hủy ở phần sổ lệnh điều kiện khi chưa phát sinh vào sàn và có trạng thái "Chờ kích hoạt". Sau khi lệnh đã được kích hoạt, việc hủy lệnh tuân theo nguyên tắc hủy lệnh LO thông thường.
+
+## 2. Sổ lệnh điều kiện
+
+Các lệnh điều kiện đã được đặt sẽ được hiển thị trong tab Sổ Lệnh Điều Kiện (nằm cạnh tab Sổ Lệnh thông thường).
+
+Sổ lệnh điều kiện có tất cả tính năng lọc nhanh và lọc theo điều kiện trạng thái lệnh tương đương với sổ lệnh thường. Số hiển thị cạnh dòng chữ "Sổ lệnh điều kiện" thể hiện tổng số lệnh đang chờ được kích hoạt.
+
+Các thông tin hiển thị trong sổ lệnh điều kiện bao gồm:
+
+- Mã
+- Thời gian đặt lệnh
+- Chiều Mua/Bán
+- KL đặt
+- Giá đặt
+- **Điều kiện lệnh:** Điều kiện về giá để kích hoạt
+- Ngày hết hạn cài đặt cho lệnh
+- **Trạng thái lệnh:** bao gồm các trạng thái "Chờ kích hoạt", "Đã kích hoạt", "Hết hạn", "Huỷ", "Từ chối"
+
+* Đối với lệnh bị từ chối, NĐT có thể xem chi tiết nguyên nhân bằng cách di chuột vào chữ "i" cạnh dòng trạng thái từ chối.
+
