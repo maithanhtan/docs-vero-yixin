@@ -1,94 +1,85 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "vero Documentation",
+  "name": "Yixin Documentation",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/yixin-favicon.ico",
   "navigation": {
     "groups": [
       {
-        "group": "Getting Started",
-      "pages": [
-        "vi/getting-started",
-        {
-          "group": "Màn hình giao dịch",
-          "pages": [
-            "vi/trading-screen",
-            {
-              "group": "Quy trình giao dịch",
-              "pages": [
-                "vi/trading-screen/trading-process/deposit-guide",
-                "vi/trading-screen/trading-process/withdrawal-guide",
-                "vi/trading-screen/trading-process/execute-trade",
-                "vi/trading-screen/trading-process/margin-fees"
-              ]
-            },
-            {
-              "group": "Giải thích các chức năng",
-              "pages": [
-                "vi/trading-screen/features-explained/trading-screen-features",
-                "vi/trading-screen/features-explained/conditional-orders"
-              ]
-            }
-          ]
-        },
-        {
-          "group": "Màn hình Trade Analytics",
-          "pages": [
-            "vi/trade-analytics",
-            "vi/trade-analytics/percentage-ratio",
-            "vi/trade-analytics/money-value",
-            "vi/trade-analytics/profit-loss-chart",
-            "vi/trade-analytics/deal-history"
-          ]
-        },
-        {
-          "group": "Quản lý tài sản",
-          "pages": [
-            "vi/asset-management",
-            "vi/asset-management/assets",
-            "vi/asset-management/deals",
-            "vi/asset-management/orders",
-            "vi/asset-management/transactions"
-          ]
-        },
-        {
-          "group": "Cài đặt tài khoản",
-          "pages": [
-            "vi/account-settings",
-            "vi/account-settings/change-password"
-          ]
-        }
-      ]
-    },
-    {
-      "group": "Legal & Support",
-      "pages": [
-        "vi/terms-conditions",
-        "vi/contact-info"
-      ]
-    }
+        "group": "Bắt đầu",
+        "pages": [
+          "vi/getting-started",
+          {
+            "group": "Bắt đầu với Yixin",
+            "pages": [
+              "vi/getting-started/platform-overview",
+              "vi/getting-started/login-guide"
+            ]
+          },
+          {
+            "group": "Chương trình giới thiệu",
+            "pages": [
+              "vi/referral-program",
+              "vi/referral-program/what-is-referral",
+              "vi/referral-program/how-to-join",
+              "vi/referral-program/how-it-works",
+              "vi/referral-program/view-stats"
+            ]
+          },
+          {
+            "group": "Màn hình giao dịch",
+            "pages": [
+              "vi/trading-screen",
+              {
+                "group": "Quy trình giao dịch",
+                "pages": [
+                  "vi/trading-screen/trading-process/deposit-guide",
+                  "vi/trading-screen/trading-process/withdrawal-guide",
+                  "vi/trading-screen/trading-process/execute-trade",
+                  "vi/trading-screen/trading-process/margin-fees"
+                ]
+              },
+              {
+                "group": "Giải thích các chức năng",
+                "pages": [
+                  "vi/trading-screen/features-explained/trading-screen-features",
+                  "vi/trading-screen/features-explained/conditional-orders"
+                ]
+              }
+            ]
+          },
+          "vi/asset-management",
+          {
+            "group": "Quản lý tài khoản",
+            "pages": [
+              "vi/account-settings",
+              "vi/account-settings/change-password",
+              "vi/account-settings/shortcuts",
+              "vi/account-settings/notifications",
+              "vi/account-settings/money-history",
+              "vi/account-settings/order-history",
+              "vi/account-settings/match-history"
+            ]
+          }
+        ]
+      }
     ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/yixin-logo.webp",
+    "dark": "/yixin-logo.webp"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@verolabs.co"
-      }
-    ],
+    "links": [],
     "primary": {
       "type": "button",
       "label": "Trading Platform",
-      "href": "https://trade.verolabs.co"
+      "href": "https://trading.yixin.com.vn"
     }
   },
   "contextual": {

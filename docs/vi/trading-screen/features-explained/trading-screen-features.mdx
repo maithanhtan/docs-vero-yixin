@@ -1,7 +1,142 @@
 ---
-title: "Giải thích các chức năng trên màn hình giao dịch"
-description: "Hướng dẫn chi tiết về các chức năng trên màn hình giao dịch vero"
+title: "Giao diện giao dịch chính"
+description: "Hướng dẫn chi tiết về màn hình giao dịch Yixin và các tính năng"
 ---
 
-Hướng dẫn chi tiết về các chức năng và tính năng trên màn hình giao dịch.
+# Màn hình giao dịch chính
 
+Màn hình giao dịch là nơi bạn thực hiện mua/bán chứng khoán, theo dõi danh mục đầu tư và quản lý lệnh trên nền tảng Yixin Trading.
+
+## Truy cập màn hình giao dịch
+
+1. Đăng nhập vào tài khoản tại [https://trading.yixin.com.vn/](https://trading.yixin.com.vn/)
+2. Click vào menu **Trading** ở thanh điều hướng phía trên
+3. Nếu chưa đăng nhập, hệ thống sẽ yêu cầu đăng nhập:
+   - Nhập email
+   - Nhập mật khẩu
+   - Click **Sign in**
+
+## Cấu trúc màn hình
+
+Màn hình giao dịch được chia thành các phần chính:
+
+### 1. Panel trái - Form đặt lệnh
+
+Panel bên trái chứa form đặt lệnh mua/bán với các thành phần:
+
+- **Symbol**: Mã chứng khoán đang giao dịch (ví dụ: SSI, VIC, VNM)
+- **Order Type**: Loại lệnh
+  - **NORMAL**: Lệnh thường
+  - **STOP**: Lệnh Stop (dừng lỗ/chốt lời)
+  - **BRACKET**: Lệnh Bracket (kết hợp stop loss và take profit)
+- **Condition**: Điều kiện lệnh
+  - **LO** (Limit Order): Lệnh giới hạn
+  - **MTL** (Match or Limit): Khớp ngay hoặc chuyển LO
+  - **ATO** (At The Open): Lệnh khớp lúc mở cửa
+  - **ATC** (At The Close): Lệnh khớp lúc đóng cửa
+- **Price**: Giá đặt lệnh
+- **Quantity**: Khối lượng
+- **Buttons**: 
+  - **BUY** (Mua): Nút màu xanh lá
+  - **SELL** (Bán): Nút màu đỏ
+
+### 2. Panel giữa - Biểu đồ giá
+
+Biểu đồ giá theo thời gian thực với:
+- Biểu đồ nến (candlestick)
+- Các chỉ báo kỹ thuật
+- Khối lượng giao dịch
+- Timeframes: 1m, 5m, 15m, 1h, 1d
+
+### 3. Panel phải - Price Depth (Sổ lệnh)
+
+Hiển thị sổ lệnh thị trường:
+- **Bên trái**: Lệnh BUY (màu xanh lá) với giá và khối lượng
+- **Bên phải**: Lệnh SELL (màu đỏ) với giá và khối lượng
+- Cho phép đặt lệnh nhanh bằng cách click trực tiếp vào giá
+
+## Các tab chức năng
+
+Phía dưới biểu đồ có các tab để theo dõi thông tin chi tiết:
+
+### Order Book - Sổ lệnh
+
+Hiển thị danh sách các lệnh đang chờ (pending orders):
+- Mã chứng khoán
+- Loại lệnh (Buy/Sell)
+- Giá đặt
+- Khối lượng
+- Trạng thái lệnh
+- Nút **Cancel** để hủy lệnh
+
+### Smart Order - Lệnh điều kiện
+
+Quản lý các lệnh thông minh và lệnh điều kiện:
+
+- **Stop Loss**: Lệnh dừng lỗ dựa trên điều kiện
+- **Bracket Order**: Khi lệnh vào được khớp, hệ thống sẽ tự động tạo lệnh dừng lỗ và chốt lời. Các lệnh này sẽ được kích hoạt khi đáp ứng điều kiện dừng lỗ và chốt lời của bạn
+
+### Portfolio - Danh mục đầu tư
+
+<Card title="Quản lý giao dịch" icon="wallet" href="/vi/asset-management">
+Xem hướng dẫn chi tiết về quản lý giao dịch và portfolio.
+</Card>
+
+Theo dõi danh mục đầu tư hiện tại:
+- **Symbol**: Mã cổ phiếu đang nắm giữ
+- **Quantity**: Số lượng cổ phiếu
+- **Average Price**: Giá mua trung bình
+- **Current Price**: Giá hiện tại
+- **P&L**: Lãi/lỗ (số tiền và %)
+- **Market Value**: Giá trị thị trường
+
+**Các thông tin tổng quan:**
+- Total Equity: Tổng tài sản
+- Cash Available: Tiền mặt khả dụng
+- Unrealized P&L: Lãi/lỗ chưa thực hiện
+- Portfolio %: Tỷ lệ danh mục
+
+## Quy trình đặt lệnh cơ bản
+
+<Steps>
+<Step title="Chọn mã chứng khoán">
+Click vào nút Symbol ở góc trên bên trái và tìm kiếm mã chứng khoán muốn giao dịch (ví dụ: VIC, VNM, SSI)
+</Step>
+
+<Step title="Chọn loại lệnh">
+Chọn **NORMAL**, **STOP**, hoặc **BRACKET** tùy vào chiến lược giao dịch
+</Step>
+
+<Step title="Chọn điều kiện lệnh">
+Chọn điều kiện: **LO** (phổ biến nhất), **MTL**, **ATO**, hoặc **ATC**
+</Step>
+
+<Step title="Nhập giá và khối lượng">
+- Nhập giá mong muốn (hoặc click vào Price Depth để chọn giá nhanh)
+- Nhập số lượng cổ phiếu muốn mua/bán
+</Step>
+
+<Step title="Xác nhận lệnh">
+- Click **BUY** để mua hoặc **SELL** để bán
+- Xác nhận thông tin lệnh
+- Lệnh sẽ xuất hiện trong tab **Order Book**
+</Step>
+</Steps>
+
+## Mẹo giao dịch
+
+<Tip>
+Sử dụng **Price Depth** (sổ lệnh bên phải) để click nhanh vào giá mua/bán, tiết kiệm thời gian nhập giá thủ công.
+</Tip>
+
+<Tip>
+Theo dõi tab **Portfolio** thường xuyên để nắm rõ tình hình lãi/lỗ và điều chỉnh chiến lược kịp thời.
+</Tip>
+
+<Warning>
+Kiểm tra kỹ giá và khối lượng trước khi nhấn nút BUY/SELL để tránh sai sót.
+</Warning>
+
+<Info>
+Lệnh STOP và BRACKET giúp bạn quản lý rủi ro tốt hơn bằng cách tự động chốt lời hoặc cắt lỗ.
+</Info>

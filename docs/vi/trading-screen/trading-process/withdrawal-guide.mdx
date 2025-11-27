@@ -1,34 +1,65 @@
 ---
 title: "Hướng dẫn rút tiền"
-description: "Hướng dẫn chi tiết cách rút tiền từ tài khoản vero"
+description: "Hướng dẫn chi tiết cách rút tiền từ tài khoản Yixin"
 ---
 
-Khách hàng có thể chuyển khoản tiền đến tài khoản tiền gửi chính chủ của khách hàng đã đăng ký tại vero
+# Hướng dẫn rút tiền
 
-## 1. Thực hiện trên App vero
+Rút tiền từ tài khoản Yixin về tài khoản ngân hàng của bạn.
 
-### Bước 1: chọn ô Menu với biểu tượng (góc trái trên cùng), chọn tính năng Rút tiền
+## Cách rút tiền
 
-### Bước 2: Điền số tiền cần rút, kiểm tra thông tin và chọn Tiếp tục
+<Steps>
+<Step title="Truy cập màn hình Trading">
+Đăng nhập vào tài khoản tại [https://trading.yixin.com.vn/](https://trading.yixin.com.vn/) và truy cập màn hình Trading.
+</Step>
 
-### Bước 3: Nhập mã OTP gửi qua SMS, chọn Xác nhận
+<Step title="Chọn nút rút tiền">
+Tại màn hình Trading, chọn **nút dấu trừ màu đỏ** để mở hộp thoại rút tiền.
+</Step>
 
-## 2. Thực hiện trên Web vero
+<Step title="Thiết lập tài khoản ngân hàng (nếu chưa có)">
+Nếu chưa thiết lập tài khoản ngân hàng:
+- Click vào **"+ Add Bank Account"** trong hộp thoại rút tiền
+- Nhập thông tin:
+  - **Bank**: Chọn ngân hàng từ danh sách
+  - **Account Number**: Nhập số tài khoản ngân hàng
 
-### Bước 1: Chọn ô Menu với biểu tượng (góc trái trên cùng) -> chọn tính năng Rút tiền
+<Warning>
+Tên chủ tài khoản ngân hàng phải khớp với tên đã đăng ký trên tài khoản Yixin của bạn.
+</Warning>
+</Step>
 
-### Bước 2: Điền số tiền cần rút, kiểm tra thông tin và chọn Tiếp tục
+<Step title="Chọn tài khoản ngân hàng và nhập số tiền">
+- Chọn tài khoản ngân hàng từ danh sách (nếu đã thiết lập nhiều tài khoản)
+- Nhập số tiền cần rút vào trường **"Withdraw Amount"**
 
-### Bước 3: Nhập mã OTP gửi qua SMS, chọn Xác nhận
+<Info>
+Số tiền rút tối đa được tính theo công thức:
+```
+Số tiền rút tối đa = min(Trading Power, Equity Balance)
+```
+</Info>
+</Step>
 
----
+<Step title="Xác nhận rút tiền">
+- Kiểm tra lại thông tin tài khoản ngân hàng và số tiền
+- Click nút **"Withdraw"** để xác nhận
+</Step>
+</Steps>
 
-- **Phí chuyển tiền:** 11,000đ (vero miễn phí rút tiền từ ngày 01/05/2025 đến hết ngày 30/09/2025)
-- Lệnh chuyển tiền dưới 500 triệu đồng sẽ được hạch toán tự động 24/7 theo hệ thống ngân hàng. vero chưa hỗ trợ rút tiền với các lệnh từ 500 triệu trở lên.
-- Phí chuyển tiền sẽ được trừ vào tài khoản khách hàng.
+## Thời gian xử lý
 
-### Lưu ý:
+<Info>
+Thời gian thực hiện duyệt rút tiền: **Từ 8:30 đến 17:00 hàng ngày** (trừ ngày lễ, Tết).
+</Info>
 
-- Nếu còn vị thế giao dịch thì số tiền có thể rút đã trừ đi số tiền đảm bảo tỷ lệ an toàn hoặc tỷ lệ qua đêm cho các vị thế.
-- Quý khách vui lòng thực hiện lệnh rút tiền tối đa là 3 tỷ đồng/ngày.
+## Lưu ý quan trọng
 
+<Warning>
+- Số tiền rút tối đa phụ thuộc vào Trading Power và Equity Balance hiện tại
+</Warning>
+
+<Tip>
+Bạn có thể kiểm tra **Available Trading Power** trong hộp thoại rút tiền để biết số tiền tối đa có thể rút.
+</Tip>

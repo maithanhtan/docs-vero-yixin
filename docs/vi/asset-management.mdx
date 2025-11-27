@@ -1,25 +1,195 @@
 ---
-title: "Quản lý tài sản"
-description: "Hướng dẫn quản lý tài sản trên vero"
+title: "Quản lý giao dịch"
+description: "Hướng dẫn quản lý giao dịch và portfolio trên Yixin"
 ---
 
-Trang Quản lý tài sản cung cấp cái nhìn tổng quan về tài sản của bạn trên nền tảng vero. Tại đây, bạn có thể theo dõi tổng tài sản, biểu đồ tài sản theo thời gian, và quản lý các giao dịch, deal, và lệnh của mình.
+# Quản lý giao dịch
 
-<CardGroup cols={2}>
-<Card title="Tài sản" icon="wallet" href="/vi/asset-management/assets">
-Thống kê tổng tài sản và biểu đồ tài sản theo thời gian.
-</Card>
+Trang Quản lý giao dịch (Portfolio) cung cấp cái nhìn tổng quan về các vị thế đang mở, tài sản và các chỉ số quan trọng của tài khoản giao dịch.
 
-<Card title="Deal" icon="briefcase" href="/vi/asset-management/deals">
-Quản lý và theo dõi các deal đã thực hiện, bao gồm thông tin về phí và thuế giao dịch.
-</Card>
+## Truy cập Portfolio
 
-<Card title="Lệnh" icon="list" href="/vi/asset-management/orders">
-Quản lý các lệnh giao dịch đang chờ khớp hoặc đã khớp.
-</Card>
+1. Đăng nhập vào tài khoản tại [https://trading.yixin.com.vn/](https://trading.yixin.com.vn/)
+2. Truy cập màn hình **Trading**
+3. Chọn tab **Portfolio** trong thanh điều hướng
 
-<Card title="Giao dịch" icon="exchange-alt" href="/vi/asset-management/transactions">
-Xem lịch sử và chi tiết các giao dịch đã thực hiện.
-</Card>
-</CardGroup>
+## Tổng quan tài khoản
 
+Portfolio hiển thị các thông tin tổng quan về tài khoản của bạn:
+
+### Trading Power (Sức mua)
+
+**Trading Power** là số tiền bạn có thể sử dụng để đặt lệnh mua mới.
+
+**Công thức tính Trading Power:**
+```
+Trading Power = Equity + Credit + Total Realize PNL + Total Unrealize PNL - MM - Temp MM
+```
+
+**Trong đó:**
+- **Equity**: Số dư tiền mặt của bạn (cash balance)
+- **Credit**: Hạn mức tín dụng
+- **Total Realize PNL**: Tổng lãi/lỗ đã thực hiện
+- **Total Unrealize PNL**: Tổng lãi/lỗ chưa thực hiện
+- **MM (Maintenance Margin)**: Ký quỹ duy trì
+- **Temp MM (Temporary Maintenance Margin)**: Ký quỹ duy trì tạm thời
+
+### Equity (Vốn chủ sở hữu)
+
+**Equity** là số dư tiền mặt hiện tại trong tài khoản của bạn. Đây là số tiền bạn có thể sử dụng để giao dịch hoặc rút về tài khoản ngân hàng.
+
+### Credit (Hạn mức tín dụng)
+
+**Credit** là hạn mức tín dụng được cấp cho tài khoản của bạn. Số tiền này có thể được sử dụng để tăng Trading Power.
+
+### MM (Maintenance Margin)
+
+**MM** là tổng số tiền ký quỹ duy trì đang được sử dụng cho tất cả các vị thế đang mở.
+
+### Temp MM (Temporary Maintenance Margin)
+
+**Temp MM** là ký quỹ duy trì tạm thời cho lệnh đang chờ.
+
+### Total Realize PNL
+
+**Total Realize PNL** là tổng lãi/lỗ đã thực hiện từ tất cả các giao dịch đã đóng.
+
+### Total Unrealize PNL
+
+**Total Unrealize PNL** là tổng lãi/lỗ chưa thực hiện từ các vị thế đang mở. Giá trị này thay đổi theo thời gian thực dựa trên giá thị trường hiện tại.
+
+## Chi tiết vị thế (Position Details)
+
+Mỗi vị thế đang mở hiển thị các thông tin sau:
+
+- **Symbol**: Mã chứng khoán
+- **Quantity**: Số lượng hợp đồng
+- **Avg Price**: Giá trung bình mua vào
+- **Market Price**: Giá thị trường hiện tại
+- **Market Value**: Giá trị thị trường của vị thế
+- **Portfolio %**: Tỷ lệ phần trăm trong tổng portfolio
+- **Unrealized PnL**: Lãi/lỗ chưa thực hiện
+- **F.Close Price**: Giá đóng bắt buộc
+- **F.Close Status**: Trạng thái đóng bắt buộc
+
+### Thông tin ký quỹ (Margin Information)
+
+Để xem thông tin chi tiết về ký quỹ, **hover chuột vào cột Margin Information** trong hàng vị thế. Thông tin hiển thị bao gồm:
+
+- **MM**: Ký quỹ duy trì cho vị thế này
+- **Margin Ratio**: Tỷ lệ ký quỹ
+- **Force Close Price**: Giá đóng bắt buộc
+- **Margin Call Price**: Giá gọi ký quỹ
+- **Force Close Status**: Trạng thái đóng bắt buộc
+- **Margin Call Status**: Trạng thái gọi ký quỹ
+
+## Tỷ lệ Force Close và Margin Call
+
+### Force Close Rate (Tỷ lệ đóng bắt buộc)
+
+**Force Close Rate** là tỷ lệ ký quỹ tối thiểu. Khi vị thế của bạn đạt đến tỷ lệ này, hệ thống sẽ tự động đóng vị thế.
+
+### Margin Call Rate (Tỷ lệ gọi ký quỹ)
+
+**Margin Call Rate** là tỷ lệ ký quỹ cảnh báo. Khi vị thế của bạn đạt đến tỷ lệ này, bạn sẽ nhận được cảnh báo.
+
+<Info>
+Tỷ lệ Force Close và Margin Call được tính theo từng sản phẩm và sẽ được công bố trên website Yixin. Để kiểm tra tỷ lệ ký quỹ và giá đóng bắt buộc, hãy hover chuột vào cột Margin Information trong hàng vị thế.
+</Info>
+
+## Cảnh báo và thông báo
+
+### Margin Call (Gọi ký quỹ)
+
+Khi vị thế của bạn đạt đến **Margin Call Rate**:
+
+- Hệ thống sẽ gửi **thông báo** trên nền tảng
+- Bạn sẽ nhận được **email cảnh báo**
+- Bạn nên nộp thêm tiền hoặc đóng một phần vị thế để tăng tỷ lệ ký quỹ
+
+<Warning>
+Nếu không xử lý, vị thế có thể bị đóng bắt buộc khi đạt Force Close Rate.
+</Warning>
+
+### Force Close (Đóng bắt buộc)
+
+Khi vị thế của bạn đạt đến **Force Close Rate**:
+
+- Hệ thống sẽ tự động gửi lệnh đóng vị thế
+- Bạn sẽ nhận được **thông báo** về việc đóng bắt buộc
+- Vị thế sẽ được đóng tự động theo giá thị trường
+
+<Warning>
+Force Close có thể xảy ra bất cứ lúc nào khi tỷ lệ ký quỹ giảm xuống dưới mức Force Close Rate. Hãy theo dõi chặt chẽ các vị thế của bạn.
+</Warning>
+
+## Đóng vị thế
+
+Bạn có thể đóng vị thế bằng các cách sau:
+
+### 1. Đóng từng vị thế
+
+- Click nút **"Close"** hoặc **"X Close"** trên hàng vị thế bạn muốn đóng
+- Xác nhận đóng vị thế
+
+### 2. Đóng tất cả vị thế
+
+- Click nút **"Close All"** ở phần đầu bảng vị thế
+- Xác nhận đóng tất cả vị thế đang mở
+
+### 3. Đóng thủ công bằng lệnh
+
+- Đặt lệnh ngược lại với vị thế hiện tại
+- Ví dụ: Nếu bạn đang có vị thế Mua (Long), đặt lệnh Bán (Sell) với cùng số lượng để đóng vị thế
+
+## Đóng tự động hàng ngày
+
+<Info>
+Yixin sẽ tự động đóng tất cả các vị thế đang mở sau **14:27** hàng ngày (giờ giao dịch).
+</Info>
+
+<Warning>
+Nếu bạn muốn giữ vị thế qua đêm, hãy đảm bảo đóng vị thế trước 14:27 hoặc mở lại vị thế sau khi hệ thống đóng tự động.
+</Warning>
+
+## Mẹo quản lý vị thế
+
+<Tip>
+Thường xuyên kiểm tra Portfolio để theo dõi Unrealized PnL và đảm bảo tỷ lệ ký quỹ ở mức an toàn.
+</Tip>
+
+<Tip>
+Hover chuột vào cột Margin Information để xem chi tiết về Margin Call Price và Force Close Price của từng vị thế.
+</Tip>
+
+<Tip>
+Bật thông báo Margin Call trong cài đặt để nhận cảnh báo kịp thời khi vị thế gần đến ngưỡng gọi ký quỹ.
+</Tip>
+
+<Warning>
+Luôn duy trì tỷ lệ ký quỹ cao hơn Margin Call Rate để tránh rủi ro bị đóng bắt buộc.
+</Warning>
+
+## Các câu hỏi thường gặp
+
+<AccordionGroup>
+<Accordion title="Trading Power của tôi bằng 0, tại sao?">
+Trading Power có thể bằng 0 khi:
+- Tất cả số tiền đã được sử dụng làm ký quỹ cho các vị thế
+- Unrealized PnL âm làm giảm Trading Power
+- Bạn cần nộp thêm tiền hoặc đóng một phần vị thế để tăng Trading Power
+</Accordion>
+
+<Accordion title="Làm sao để tăng Trading Power?">
+Bạn có thể tăng Trading Power bằng cách:
+- Nộp thêm tiền vào tài khoản
+- Đóng các vị thế đang lỗ để giảm Unrealized PnL âm
+- Đợi các vị thế đang lãi tăng giá trị
+</Accordion>
+
+<Accordion title="Khi nào vị thế sẽ bị đóng bắt buộc?">
+Vị thế sẽ bị đóng bắt buộc khi:
+- Tỷ lệ ký quỹ giảm xuống dưới Force Close Rate
+- Sau 14:27 hàng ngày (đóng tự động tất cả vị thế)
+</Accordion>
+</AccordionGroup>

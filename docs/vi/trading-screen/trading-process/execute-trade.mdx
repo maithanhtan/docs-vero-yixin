@@ -1,7 +1,180 @@
 ---
 title: "Thực hiện giao dịch"
-description: "Hướng dẫn thực hiện giao dịch trên nền tảng vero"
+description: "Hướng dẫn thực hiện giao dịch trên nền tảng Yixin"
 ---
 
-Thông tin về cách thực hiện giao dịch trên nền tảng vero.
+# Thực hiện giao dịch
 
+Hướng dẫn chi tiết cách đặt lệnh giao dịch trên nền tảng Yixin Trading.
+
+## Truy cập màn hình giao dịch
+
+1. Đăng nhập vào tài khoản tại [https://trading.yixin.com.vn/](https://trading.yixin.com.vn/)
+2. Click vào menu **Trading** ở thanh điều hướng phía trên
+3. Màn hình giao dịch sẽ hiển thị với các panel chính
+
+## Cấu trúc màn hình đặt lệnh
+
+Màn hình đặt lệnh bao gồm các thành phần chính:
+
+### 1. Thông tin tài khoản và mã chứng khoán
+
+**Account:**
+- Hiển thị loại tài khoản (REAL hoặc DEMO)
+- Tên tài khoản hoặc email
+
+**Symbol:**
+- Mã chứng khoán đang giao dịch (ví dụ: VN30F2512)
+- Giá hiện tại và biến động (màu xanh nếu tăng, màu đỏ nếu giảm)
+
+### 2. Trading Power (Sức mua)
+
+Hiển thị số tiền bạn có thể sử dụng để đặt lệnh mua mới.
+
+- Trading Power phải đủ để đặt lệnh mới
+
+### 3. Order Type (Loại lệnh)
+
+Chọn loại lệnh bạn muốn đặt:
+
+- **NORMAL**: Lệnh thường
+- **STOP**: Lệnh dừng (điều kiện)
+- **BRACKET**: Lệnh Bracket (tự động tạo Stop Loss và Take Profit)
+
+### 4. Side (Chiều giao dịch)
+
+Chọn chiều giao dịch:
+
+- **BUY** (Mua): Nút màu xanh lá
+- **SELL** (Bán): Nút màu đỏ
+
+### 5. Order Condition (Điều kiện lệnh)
+
+Chọn điều kiện thực hiện lệnh:
+
+- **LO** (Limit Order): Lệnh giới hạn - khớp ở giá bạn đặt hoặc tốt hơn
+- **MTL** (Match or Limit): Khớp ngay hoặc chuyển LO - ưu tiên khớp ngay, nếu không khớp được sẽ chuyển thành LO
+- **ATO** (At The Open): Khớp lúc mở cửa
+- **ATC** (At The Close): Khớp lúc đóng cửa
+
+### 6. Quantity (Qty) - Khối lượng
+
+Nhập số lượng hợp đồng bạn muốn giao dịch:
+
+- Nhập trực tiếp vào trường **Qty**
+- **MB (Mua toàn bộ)**: Tự động điền khối lượng tối đa có thể mua dựa trên Trading Power
+- **MS (Bán toàn bộ)**: Tự động điền khối lượng tối đa có thể bán dựa trên vị thế hiện có
+- Sử dụng nút **+** hoặc **-** để điều chỉnh khối lượng
+
+## Order Summary (Tóm tắt lệnh)
+
+Khi bạn nhập giá và khối lượng, hệ thống sẽ tự động tính toán và hiển thị:
+
+- **Side**: BUY hoặc SELL
+- **Order Type**: NORMAL, STOP, hoặc BRACKET
+- **Estimate Price**: Giá ước tính (giá bạn đã nhập hoặc giá thị trường)
+- **Qty**: Khối lượng đã nhập
+- **Value**: Giá trị ước tính của lệnh
+
+### Công thức tính giá trị lệnh (Order Value)
+
+Giá trị lệnh được tính theo công thức:
+
+```
+Order Value = Product Margin Rate × Price × Qty × Point Value
+```
+
+**Trong đó:**
+- **Product Margin Rate**: Tỷ lệ ký quỹ của sản phẩm (được thông báo trên website Yixin)
+- **Price**: Giá khớp lệnh
+- **Qty**: Khối lượng hợp đồng
+- **Point Value**: Giá trị điểm của sản phẩm (ví dụ: VN30F -> 100000)
+
+<Info>
+Giá trị lệnh (Order Value) phải nhỏ hơn hoặc bằng Trading Power của bạn. Hệ thống sẽ tự động kiểm tra và cảnh báo nếu Trading Power không đủ.
+</Info>
+
+## Cách đặt lệnh
+
+<Steps>
+<Step title="Chọn mã chứng khoán">
+Click vào trường **Symbol** và chọn mã chứng khoán bạn muốn giao dịch (ví dụ: VN30F2512)
+</Step>
+
+<Step title="Kiểm tra Trading Power">
+Kiểm tra **Trading Power** để đảm bảo bạn có đủ sức mua để đặt lệnh
+</Step>
+
+<Step title="Chọn loại lệnh">
+Chọn **NORMAL**, **STOP**, hoặc **BRACKET** tùy vào chiến lược giao dịch của bạn
+</Step>
+
+<Step title="Chọn Side">
+Click **BUY** để mua hoặc **SELL** để bán
+</Step>
+
+<Step title="Chọn điều kiện lệnh">
+Chọn điều kiện: **LO**, **MTL**, **ATO**, hoặc **ATC**
+</Step>
+
+<Step title="Nhập khối lượng">
+- Nhập số lượng hợp đồng vào trường **Qty**
+- Hoặc sử dụng **MB** (Mua toàn bộ) / **MS** (Bán toàn bộ) để tự động điền
+- Kiểm tra **Value** trong Order Summary để đảm bảo không vượt quá Trading Power
+</Step>
+
+<Step title="Kiểm tra Order Summary">
+Xem lại thông tin trong **Order Summary**:
+- Side, Order Type, Estimate Price, Qty, Value
+- Đảm bảo tất cả thông tin chính xác
+</Step>
+
+<Step title="Xác nhận đặt lệnh">
+Click nút **Place Order** (màu xanh lá) ở cuối form để xác nhận đặt lệnh
+</Step>
+</Steps>
+
+## Lưu ý quan trọng
+
+<Warning>
+Luôn kiểm tra Trading Power trước khi đặt lệnh. Nếu Order Value vượt quá Trading Power, lệnh sẽ không được chấp nhận.
+</Warning>
+
+<Info>
+Order Value được tính tự động khi bạn nhập giá và khối lượng. Giá trị này sẽ được cập nhật theo thời gian thực dựa trên giá thị trường hiện tại.
+</Info>
+
+<Info>
+Khi chọn **MTL**, lệnh sẽ được thực hiện dưới dạng MTL (Market To Limit) - ưu tiên khớp ngay, nếu không khớp được sẽ chuyển thành LO.
+</Info>
+
+## Sử dụng Price Depth (Sổ lệnh)
+
+Bạn có thể đặt lệnh nhanh bằng cách:
+
+1. Xem sổ lệnh (Price Depth) ở panel bên phải
+2. Click trực tiếp vào giá mua/bán trong sổ lệnh
+3. Hệ thống sẽ tự động điền giá vào form đặt lệnh
+
+**Thông tin hiển thị trong Price Depth:**
+- **Bid Qty / Bid Price**: Lệnh mua (màu xanh lá)
+- **Ask Price / Ask Qty**: Lệnh bán (màu đỏ)
+- Thanh tổng hợp hiển thị tỷ lệ Bid/Ask
+
+## Mẹo giao dịch
+
+<Tip>
+Sử dụng nút **MB** (Mua toàn bộ) để tự động tính khối lượng tối đa có thể mua dựa trên Trading Power hiện tại.
+</Tip>
+
+<Tip>
+Kiểm tra Order Summary trước khi đặt lệnh để đảm bảo giá trị lệnh không vượt quá Trading Power.
+</Tip>
+
+<Tip>
+Sử dụng Price Depth để click nhanh vào giá, tiết kiệm thời gian nhập giá thủ công.
+</Tip>
+
+<Warning>
+Luôn kiểm tra kỹ Side (BUY/SELL), giá và khối lượng trước khi click Place Order để tránh sai sót.
+</Warning>

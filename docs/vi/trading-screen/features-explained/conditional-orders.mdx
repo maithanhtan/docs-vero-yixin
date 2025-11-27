@@ -1,38 +1,161 @@
 ---
 title: "Lệnh điều kiện"
-description: "Hướng dẫn về lệnh điều kiện trên nền tảng vero"
+description: "Hướng dẫn về lệnh điều kiện trên nền tảng Yixin"
 ---
 
-Từ ngày 16/07/2020, vero ra mắt tính năng đặt lệnh điều kiện hỗ trợ Nhà Đầu Tư trong quá trình giao dịch chứng khoán phái sinh qua nền tảng vero.
+# Lệnh điều kiện
 
-## 1. Lệnh điều kiện
+Yixin hỗ trợ các loại lệnh điều kiện để giúp bạn quản lý rủi ro và tự động hóa giao dịch. Các lệnh điều kiện sẽ được kích hoạt khi đáp ứng các điều kiện bạn đã thiết lập.
 
-**Lệnh điều kiện:** Là lệnh mua/bán hợp đồng tương lai nhưng kết hợp cài đặt thêm các điều kiện về thời gian, về giá, về quy luật phát sinh lệnh. Theo đó, hệ thống sẽ kiểm tra và xử lý lệnh theo các điều kiện đã được cài đặt.
+## Truy cập Smart Order
 
-- **Giá đặt lệnh (Order Price):** là giá của lệnh được phát sinh vào sàn khi đã thỏa mãn các điều kiện. Giá được khách hàng thiết lập lúc đặt lệnh và có thể thay đổi theo những nguyên tắc do khách hàng cài đặt.
-- **Giá kích hoạt (Trigger Price):** là giá được sử dụng để so sánh với giá thị trường của HĐTL để xác định điều kiện về giá của lệnh điều kiện có thỏa mãn hay không. Giá kích hoạt là giá trong phiên liên tục.
-- **Ngày hết hạn (Expired Time):** là ngày và giờ hết hạn được NĐT chọn trong quá trình cài đặt điều kiện cho loại lệnh này. Tại nền tảng vero, ngày giờ hết hạn xa nhất có thể đặt cho 1 lệnh điều kiện là 30 ngày kể từ ngày đặt lệnh.
+1. Đăng nhập vào tài khoản tại [https://trading.yixin.com.vn/](https://trading.yixin.com.vn/)
+2. Truy cập màn hình **Trading**
+3. Chọn tab **Smart Order** ở phía dưới biểu đồ
 
-*Khi các điều kiện về giá được thoả mãn, lệnh điều kiện sẽ được kích hoạt. Đồng thời, 1 lệnh LO tương ứng được sinh ra và hiển thị trong sổ lệnh thường.
+## Các loại lệnh điều kiện
 
-**Nguyên tắc hủy lệnh:** Lệnh điều kiện chỉ được hủy ở phần sổ lệnh điều kiện khi chưa phát sinh vào sàn và có trạng thái "Chờ kích hoạt". Sau khi lệnh đã được kích hoạt, việc hủy lệnh tuân theo nguyên tắc hủy lệnh LO thông thường.
+### 1. STOP - Lệnh dừng
 
-## 2. Sổ lệnh điều kiện
+Lệnh STOP là lệnh điều kiện được kích hoạt khi giá thị trường đạt đến mức giá bạn đã thiết lập.
 
-Các lệnh điều kiện đã được đặt sẽ được hiển thị trong tab Sổ Lệnh Điều Kiện (nằm cạnh tab Sổ Lệnh thông thường).
+#### Cách đặt lệnh STOP
 
-Sổ lệnh điều kiện có tất cả tính năng lọc nhanh và lọc theo điều kiện trạng thái lệnh tương đương với sổ lệnh thường. Số hiển thị cạnh dòng chữ "Sổ lệnh điều kiện" thể hiện tổng số lệnh đang chờ được kích hoạt.
+<Steps>
+<Step title="Chọn loại lệnh">
+Chọn **STOP** trong phần Order Type
+</Step>
 
-Các thông tin hiển thị trong sổ lệnh điều kiện bao gồm:
+<Step title="Chọn Side">
+Chọn **BUY** (Mua) hoặc **SELL** (Bán)
+</Step>
 
-- Mã
-- Thời gian đặt lệnh
-- Chiều Mua/Bán
-- KL đặt
-- Giá đặt
-- **Điều kiện lệnh:** Điều kiện về giá để kích hoạt
-- Ngày hết hạn cài đặt cho lệnh
-- **Trạng thái lệnh:** bao gồm các trạng thái "Chờ kích hoạt", "Đã kích hoạt", "Hết hạn", "Huỷ", "Từ chối"
+<Step title="Thiết lập điều kiện giá">
+- Chọn toán tử so sánh: **&gt;=** (lớn hơn hoặc bằng) hoặc **&lt;=** (nhỏ hơn hoặc bằng)
+- Nhập **Condition Price** (Giá điều kiện) - giá mà khi đạt đến sẽ kích hoạt lệnh
+- Có thể click nút **Last Price** để sử dụng giá hiện tại
+- Sử dụng nút **+** hoặc **-** để điều chỉnh giá
+</Step>
 
-* Đối với lệnh bị từ chối, NĐT có thể xem chi tiết nguyên nhân bằng cách di chuột vào chữ "i" cạnh dòng trạng thái từ chối.
+<Step title="Nhập khối lượng">
+- Nhập số lượng hợp đồng vào trường **Qty**
+- Có thể sử dụng nút **MB** (Mua toàn bộ) hoặc **MS** (Bán toàn bộ)
+- Sử dụng nút **+** hoặc **-** để điều chỉnh khối lượng
+</Step>
 
+<Step title="Chọn Activate">
+Chọn cách kích hoạt lệnh:
+- **LO** (Limit Order): Lệnh giới hạn
+- **MTL** (Match or Limit): Khớp ngay hoặc chuyển LO
+</Step>
+
+<Step title="Xác nhận đặt lệnh">
+Kiểm tra lại thông tin trong **Order Summary** và xác nhận đặt lệnh
+</Step>
+</Steps>
+
+<Info>
+Lệnh STOP sẽ được thực hiện ở giá thị trường khi điều kiện được kích hoạt.
+</Info>
+
+**Thông tin hiển thị trong Order Summary:**
+- Side: BUY hoặc SELL
+- Trigger Condition: &gt;= hoặc &lt;=
+- Condition Price: Giá điều kiện đã nhập
+- Order Type: LO hoặc MTL
+- Qty: Khối lượng
+- Est. Value: Giá trị ước tính
+
+### 2. BRACKET - Lệnh Bracket
+
+Lệnh BRACKET là lệnh kết hợp tự động tạo lệnh dừng lỗ và chốt lời sau khi lệnh vào được khớp.
+
+#### Cách đặt lệnh BRACKET
+
+<Steps>
+<Step title="Chọn loại lệnh">
+Chọn **BRACKET** trong phần Order Type
+</Step>
+
+<Step title="Chọn Side">
+Chọn **BUY** (Mua) hoặc **SELL** (Bán)
+</Step>
+
+<Step title="Thiết lập điều kiện giá vào">
+- Chọn toán tử so sánh: **&gt;=** (lớn hơn hoặc bằng) hoặc **&lt;=** (nhỏ hơn hoặc bằng)
+- Nhập **Condition Price** (Giá điều kiện) - giá mà khi đạt đến sẽ kích hoạt lệnh vào
+- Có thể click nút **Last Price** để sử dụng giá hiện tại
+- Sử dụng nút **+** hoặc **-** để điều chỉnh giá
+</Step>
+
+<Step title="Nhập khối lượng">
+- Nhập số lượng hợp đồng vào trường **Qty**
+- Có thể sử dụng nút **MB** (Mua toàn bộ) hoặc **MS** (Bán toàn bộ)
+- Sử dụng nút **+** hoặc **-** để điều chỉnh khối lượng
+</Step>
+
+<Step title="Thiết lập Take Profit">
+- Chọn loại: **Price** (theo giá) hoặc **%** (theo phần trăm)
+- Nhập giá hoặc phần trăm chốt lời mong muốn
+- Click **Cancel** nếu không muốn đặt Take Profit
+</Step>
+
+<Step title="Thiết lập Stop Loss">
+- Chọn loại: **Price** (theo giá) hoặc **%** (theo phần trăm)
+- Nhập giá hoặc phần trăm dừng lỗ mong muốn
+- Click **Cancel** nếu không muốn đặt Stop Loss
+</Step>
+
+<Step title="Xác nhận đặt lệnh">
+Kiểm tra lại thông tin trong **Order Summary** và xác nhận đặt lệnh
+</Step>
+</Steps>
+
+<Info>
+Khi lệnh vào được khớp, hệ thống sẽ tự động tạo lệnh dừng lỗ và chốt lời. Lệnh vào, dừng lỗ và chốt lời sẽ được thực hiện dưới dạng lệnh MTL (Market To Limit).
+</Info>
+
+**Cách hoạt động:**
+1. Lệnh vào được đặt với điều kiện giá bạn đã thiết lập
+2. Khi lệnh vào được khớp, hệ thống tự động tạo:
+   - Lệnh Stop Loss với giá/điều kiện bạn đã thiết lập
+   - Lệnh Take Profit với giá/điều kiện bạn đã thiết lập
+3. Các lệnh Stop Loss và Take Profit sẽ được kích hoạt khi đáp ứng điều kiện của bạn
+
+**Thông tin hiển thị trong Order Summary:**
+- Side: BUY hoặc SELL
+- Trigger Condition: &gt;= hoặc &lt;=
+- Condition Price: Giá điều kiện đã nhập
+- Qty: Khối lượng
+- Value: Giá trị
+
+## Quản lý lệnh điều kiện
+
+Trong tab **Smart Order**, bạn có thể:
+
+- Xem danh sách tất cả các lệnh điều kiện đã đặt
+- Theo dõi trạng thái lệnh (Symbol, Side, Type, Qty, Filled, Cancelled, Price, Avg. Fill, Status, Time, Order ID)
+- Lọc và sắp xếp lệnh theo các cột
+- Hủy lệnh điều kiện nếu cần
+
+<Info>
+Nếu không có lệnh điều kiện nào, bạn sẽ thấy thông báo "No Orders" với mô tả "No orders found for this symbol".
+</Info>
+
+## Lưu ý quan trọng
+
+<Warning>
+Lệnh điều kiện chỉ được kích hoạt khi các điều kiện giá được đáp ứng. Không có gì đảm bảo lệnh sẽ được khớp sau khi kích hoạt, đặc biệt trong thị trường biến động mạnh.
+</Warning>
+
+<Tip>
+Sử dụng lệnh BRACKET để tự động quản lý rủi ro và chốt lời, giúp bạn không cần theo dõi liên tục.
+</Tip>
+
+<Tip>
+Thiết lập Stop Loss và Take Profit hợp lý để bảo vệ vốn và đảm bảo lợi nhuận.
+</Tip>
+
+<Info>
+Luôn kiểm tra lại thông tin trong Order Summary trước khi xác nhận đặt lệnh để tránh sai sót.
+</Info>
