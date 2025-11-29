@@ -7,14 +7,14 @@ description: "Tìm hiểu cách chương trình giới thiệu hoạt động"
 
 ## Nguyên tắc cơ bản
 
-Khi bạn bè của bạn (người được giới thiệu) thực hiện giao dịch, bạn sẽ nhận được **% hoa hồng** dựa trên giá trị giao dịch của họ.
+Khi bạn bè của bạn (người được giới thiệu) thực hiện giao dịch, bạn sẽ nhận được **% hoa hồng** dựa trên phi giao dich của họ.
 
 ## Tính toán hoa hồng
 
 ### Tỷ lệ hoa hồng theo sản phẩm
 
 Tỷ lệ hoa hồng được tính dựa trên:
-- **Giá trị giao dịch** của người được giới thiệu
+- **Phi giao dich** của người được giới thiệu
 - **Tỷ lệ hoa hồng theo từng sản phẩm** (được công bố trên website Yixin)
 
 <Info>
@@ -44,7 +44,7 @@ Khi bạn bè thực hiện giao dịch trên nền tảng Yixin, hệ thống s
 
 <Step title="Tính toán hoa hồng">
 Hoa hồng được tính dựa trên:
-- Tổng giá trị giao dịch (Total Volume)
+- Tổng phi giao dich (Total Fee)
 - Tỷ lệ hoa hồng theo sản phẩm
 - Tỷ lệ hoàn tiền bạn đã thiết lập
 </Step>
@@ -59,13 +59,13 @@ Hoa hồng sẽ được cập nhật vào tài khoản của bạn và có th�
 ### Hoa hồng bạn nhận được (Commission Value)
 
 ```
-Hoa hồng bạn nhận = Giá trị giao dịch × Tỷ lệ hoa hồng × (1 - Tỷ lệ hoàn tiền)
+Hoa hồng bạn nhận = Phi giao dich × Tỷ lệ hoa hồng × (1 - Tỷ lệ hoàn tiền)
 ```
 
 ### Giá trị hoàn tiền cho bạn bè (Rebate Value)
 
 ```
-Giá trị hoàn tiền = Giá trị giao dịch × Tỷ lệ hoa hồng × Tỷ lệ hoàn tiền
+Giá trị hoàn tiền = Phi giao dich × Tỷ lệ hoa hồng × Tỷ lệ hoàn tiền
 ```
 
 ## Ví dụ minh họa
